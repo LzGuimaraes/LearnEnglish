@@ -1,4 +1,4 @@
-const temas = ["Comida", "Viagem", "Esportes", "Trabalho", "Lazer", "Tecnologia"];
+const temas = ["Comida", "Viagem", "Esportes", "Trabalho", "Lazer", "Tecnologia", "Dia a dia"];
 const temposVerbais = [
     {
         nome: "Present Simple",
