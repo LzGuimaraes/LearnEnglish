@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn English</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Learn English</h1>
-        <div class="buttons-container">
-            <button onclick="sortearTema()">Sortear Tema</button>
-            <button onclick="sortearTempoVerbal()">Sortear Tempo Verbal</button>
-            <button onclick="mostrarEstrutura()">Mostrar Estrutura</button>
-            <button onclick="mostrarExemplo()">Mostrar Exemplo</button>
-        </div>
-        <div id="result"></div>
+      <h1>Learn English</h1>
+      <div class="instructions-card">
+        <h2>Como usar este app?</h2>
+        <ol>
+          <li>Clique em "Sortear Tema" para escolher um assunto aleatório</li>
+          <li>
+            Clique em "Sortear Tempo Verbal" para selecionar um tempo verbal em
+            inglês
+          </li>
+          <li>
+            Use "Mostrar Estrutura" para ver como formar frases neste tempo
+            verbal
+          </li>
+          <li>
+            Clique em "Mostrar Exemplo" para ver um exemplo contextualizado com
+            o tema
+          </li>
+        </ol>
+        <p class="tip">
+          Dica: Tente criar suas próprias frases usando a estrutura mostrada!
+        </p>
+      </div>
+      <div class="buttons-container">
+        <button onclick="sortearTema()">Sortear Tema</button>
+        <button onclick="sortearTempoVerbal()">Sortear Tempo Verbal</button>
+        <button onclick="mostrarEstrutura()">Mostrar Estrutura</button>
+        <button onclick="mostrarExemplo()">Mostrar Exemplo</button>
+      </div>
+      <div id="result"></div>
     </div>
 
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>

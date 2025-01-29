@@ -1,129 +1,175 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .container {
-    width: 100%;
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.instructions-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.instructions-card:hover {
+  transform: translateY(-5px);
+}
+
+.instructions-card h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.instructions-card ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.instructions-card li {
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.instructions-card .tip {
+  color: #2980b9;
+  font-style: italic;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
 }
 
 .buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 button {
-    min-width: 200px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    background: #4a90e2;
-    color: white;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background: #357abd;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #result {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #2c3e50;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    word-wrap: break-word;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    .container {
-        padding: 1.5rem;
-    }
+  .container {
+    padding: 1.5rem;
+  }
 
-    button {
-        min-width: 160px;
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
+  button {
+    min-width: 160px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
 
-    #result {
-        font-size: 1.1rem;
-        padding: 1rem;
-    }
+  #result {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .instructions-card {
+    padding: 1rem;
+  }
+
+  .instructions-card h2 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
-    }
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
 
-    .container {
-        padding: 1rem;
-    }
+  .container {
+    padding: 1rem;
+  }
 
-    button {
-        min-width: 140px;
-        width: 100%;
-        font-size: 0.85rem;
-    }
+  button {
+    min-width: 140px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
 
-    #result {
-        font-size: 1rem;
-        padding: 0.75rem;
-    }
+  #result {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
 }
